@@ -28,7 +28,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,json,md}": [
+    "./app/**/*.{js,json,md}": [
       "prettier --write",
       "git add"
     ]
