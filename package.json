@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "lint": "eslint **/*.js",
+    "pretty": "prettier --write",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
@@ -28,7 +30,8 @@
     }
   },
   "lint-staged": {
-    "./app/**/*.{js,json,md}": [
+    "app/**/*.{js,json,md}": [
+      "yarn run lint",
       "prettier --write",
       "git add"
     ]
