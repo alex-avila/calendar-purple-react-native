@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "lint": "eslint **/*.js",
+    "lint": "eslint **/*.js --fix",
     "pretty": "prettier --write",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -13,6 +13,7 @@
     "react-native": "0.56.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "babel-jest": "23.4.2",
     "babel-preset-react-native": "^5",
     "eslint": "^5.2.0",
@@ -30,7 +31,7 @@
     }
   },
   "lint-staged": {
-    "{app/}**/*.{js,json,md}": [
+    "{app}/**/*.{js,json,md}": [
       "yarn run lint",
       "prettier --write",
       "git add"
